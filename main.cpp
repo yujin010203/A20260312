@@ -4,7 +4,9 @@ using namespace std;
 
 // 45개 공 중에서 6개를 뽑는 프로그램
 
+// int* P = new int[];
 int Numbers[45];
+int PlayerNumber[6];
 
 void Init()
 {
@@ -12,6 +14,8 @@ void Init()
 	{
 		Numbers[i] = i + 1;
 	}
+
+	srand((unsigned int)time(nullptr));
 }
 
 void Shuffle()
@@ -27,14 +31,23 @@ void Shuffle()
 	}
 }
 
+void Deal()
+{
+	for (int i = 0; i < 6; i++)
+	{
+		PlayerNumber[i] = Numbers[i * 2];
+	}
+}
+
 int main()
 {
 	Init();
 	Shuffle();
+	Deal();
 
 	for (int i = 0; i < 6; i++)
 	{
-		cout << Numbers[i] << " ";
+		cout << PlayerNumber[i] << " ";
 	}
 
 	return 0;
