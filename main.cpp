@@ -45,14 +45,10 @@ int main()
 
 	int PlayerNumber[6];
 
-	for (int i = 0; i < 6; i++)
-	{
-		PlayerNumber[i] = Numbers[i];
-	}
 
 	for (int i = 0; i < 6; i++)
 	{
-		cout << PlayerNumber[i] << " ";
+		cout << Numbers[i] << " ";
 	}
 
 	delete[] Numbers;
