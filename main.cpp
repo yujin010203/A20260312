@@ -29,6 +29,7 @@ void Shuffle(int* Numbers, int Size)
 	}
 }
 
+/*
 int main()
 {
 	int Size;
@@ -55,3 +56,4 @@ int main()
 	Numbers = nullptr;
 	return 0;
 }
+*/
